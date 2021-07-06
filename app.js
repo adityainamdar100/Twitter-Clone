@@ -22,8 +22,11 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 const authRoutes = require('./routes/authRoutes');
+
+const postApiRoute = require('./routes/api/posts');
 
 app.use(session({
     secret: 'weneedabettersecret',
@@ -42,9 +45,11 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use(authRoutes);
 
+app.use(postApiRoute);
+
 app.get('/', isLoggedIn, (req, res) => {
 
-    res.render('home');
+    res.render('layouts/main-layout');
 });
 
 app.listen(3000, () => {

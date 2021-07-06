@@ -1,0 +1,36 @@
+<%- include("../partials/header") %>
+    <link rel="stylesheet" href="/css/main.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <nav class="col-2">
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fas fa-home"></i></a>
+                    <a href=""><i class="fas fa-search"></i></a>
+                    <a href=""><i class="far fa-bell"></i></a>
+                    <a href=""><i class="far fa-envelope"></i></a>
+                    <a href=""><i class="far fa-user"></i></a>
+                    <a href=""><i class="fas fa-sign-out-alt"></i></a>
+                </nav>
+                <div class="main-container col-10 col-lg-6 col-md-8">
+                    <h1 class="fw-bold titleContainer">Home</h1>
+                    <div class="mb-3 post-container">
+                        <div class="userImageContainer">
+                            <img src="/images/ProfilePic.jpg" alt="User's Profile Image">
+                        </div>
+                        <div class="textareaContainer">
+                            <textarea id="post-text" cols="30" rows="3" placeholder="What's happening?"></textarea>
+                            <button id="submitPostButton">Post</button>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <ul id="allTweets"></ul>
+                    </div>
+                </div>
+                <div class="d-none d-md-block col-md-2 col-lg-4">Third Div</div>
+            </div>
+        </div>
+        <%- include("../partials/footer") %>
