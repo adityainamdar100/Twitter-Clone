@@ -93,7 +93,7 @@ function createPostHtml(postData) {
     return `<div class='post' data-id='${postData._id}'>
                   <div class='mainContentContainer'>
                       <div class='userImageContainer'>
-                          <img src='${postedBy.profilePic}'>
+                          <img src='images/ProfilePic.jpg'>
                       </div>
                       <div class='postContentContainer'>
                           <div class='header'>
